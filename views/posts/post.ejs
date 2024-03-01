@@ -1,0 +1,14 @@
+<% layout("./biolerplate.ejs") %>
+<h1 class="pages-name"><%= title %></h1>
+<p class="pages-content"><%= content %></p>
+
+
+
+<div class="d-flex gap-5">
+  <form method="POST" action="/posts/<%=title %>?_method=DELETE">
+    <button class="btn btn-danger btn-sm">Delete</button>
+  </form>
+  <form method="get" action="/posts/<%=title %>/edit">
+    <button class="btn btn-danger btn-sm">Edit</button>
+  </form>
+</div>

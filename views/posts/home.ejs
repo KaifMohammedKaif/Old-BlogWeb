@@ -1,0 +1,22 @@
+<% layout("./biolerplate.ejs") %>
+<h1 class="pages-name"><%= page.pageName %></h1>
+<p class="pages-content"><%=page.pageContent%></p>
+<h1>Recent post</h1>
+<div class="all-cards-container row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+  <% posts.forEach((post)=>{ %>
+  <div class="col-sm-6 col-lg-4 mb-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><%= post.title %></h5>
+        <% let blogContent = post.content %> <% let shortContent =
+        blogContent.substring(0,75); %>
+        <p class="card-text">
+          <%= shortContent %>
+          <a href="/posts/<%=post.title%>" id="read-more">....Read More</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <% }) %>
+</div>
+<hr />

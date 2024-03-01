@@ -1,0 +1,32 @@
+<% layout("./biolerplate.ejs") %>
+
+<h1 class="page-heading">Compose</h1>
+<form class="" action="/compose" method="post">
+  <div class="form-group">
+    <div class="compose-title">
+      <h2>Title</h2>
+      <input
+        class="form-control"
+        type="text"
+        name="postTitle"
+        placeholder="Enter Title of the post"
+        autocomplete="off"
+      />
+    </div>
+    <div class="compose-post">
+      <h2>Content</h2>
+      <textarea
+        class="form-control"
+        name="postBody"
+        rows="20"
+        placeholder="Enter the content of the post here"
+      ></textarea>
+    </div>
+  </div>
+  <div class="col-lg-12 offset-5">
+    <button class="btn btn-outline-danger m-4" type="reset">Clear</button>
+    <button class="btn btn-outline-success" type="submit" name="button">
+      Publish
+    </button>
+  </div>
+</form>
